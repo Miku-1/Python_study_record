@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3 >春晓</h3>
+<ul name  = ul_1>
+<li name ="li_1" style="color: red">春眠不觉晓，</li>
+<li id = "li_2">处处闻啼鸟。</li>
+<li >夜来风雨声，</li>
+<li  name = 'li_4'>花落知多少。</li>
+</ul>
+<input type="button" onclick="demo1()" value="demo1">
+<input type="button" onclick="demo2()" value="demo2">
+</body>
+<script type="text/javascript">
+    function demo1() {
+        //创建一个li节点
+        var newli = document.createElement('li');
+        //创建文本节点
+        var newtext = document.createTextNode('大白熊');
+
+        newli.appendChild(newtext);
+
+        var ulobj = document.getElementsByTagName('ul')[0];
+        ulobj.appendChild(newli);
+        // var oneli = document.getElementsByTagName('li')[0];//获取第一个li节点
+        // ulobj.removeChild(oneli)
+
+    }
+
+    function demo2() {
+        var newli = document.createElement('li');
+        //创建文本节点
+        var newtext = document.createTextNode('大白熊');
+
+        newli.appendChild(newtext);
+
+        var ulobj = document.getElementsByTagName('ul')[0];
+        // ulobj.appendChild(newli);
+        var oneli = document.getElementsByTagName('li')[0];//获取第一个li节点
+        ulobj.removeChild(oneli)
+
+    }
+</script>
+</html>
